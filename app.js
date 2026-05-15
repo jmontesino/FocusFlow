@@ -1,8 +1,8 @@
 // --- CONFIGURACIÓN DEL TEMPORIZADOR ---
 const TIEMPOS = {
-  work: 0.1 * 60,
-  shortBreak: 0.1 * 60,
-  longBreak: 0.1 * 60,
+  work: 1 * 60,
+  shortBreak: 1 * 60,
+  longBreak: 1 * 60,
 };
 
 let tiempoRestante = TIEMPOS.work;
