@@ -1,37 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FocusFlow - TCC HCI</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="work-mode">
-    <div class="container">
-        <section class="hero-timer">
-            <h1>FocusFlow</h1>
-            <div class="timer-display">
-                <svg class="progress-ring" width="300" height="300">
-                    <circle class="progress-ring__circle" stroke="white" stroke-width="8" fill="transparent" r="140" cx="150" cy="150"/>
-                </svg>
-                <span id="time">25:00</span>
-            </div>
-            <div class="controls">
-                <button id="start-btn">Iniciar</button>
-                <button id="reset-btn">Reiniciar</button>
-            </div>
-            <p id="status-text">Tiempo de Enfoque</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus~Flow - Pomodoro 🍅</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Tipografía legible (WCAG) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body class="mode-work">
+    <div class="glass-container">
+      <header>
+        <h1>Focus ~ Flow 🍅</h1>
+      </header>
+
+      <main>
+        <!-- Sección del Temporizador -->
+        <section class="timer-section">
+          <div class="timer-modes">
+            <button id="btn-work" class="active">Trabajo</button>
+            <button id="btn-short-break">Descanso Corto</button>
+            <button id="btn-long-break">Descanso Largo</button>
+          </div>
+          <!-- Reemplazar solo esta parte dentro de <section class="timer-section"> -->
+          <div class="timer-circle-container">
+            <svg class="progress-ring" width="240" height="240">
+              <!-- Círculo de fondo (transparente/opaco) -->
+              <circle
+                class="progress-ring__background"
+                stroke-width="10"
+                fill="transparent"
+                r="110"
+                cx="120"
+                cy="120"
+              />
+              <!-- Círculo de progreso (el que se anima) -->
+              <circle class="progress-ring__circle" stroke-width="10" fill="transparent" r="110" cx="120" cy="120" />
+            </svg>
+            <div class="time-display" id="time-display">25:00</div>
+          </div>
+          <div class="timer-controls">
+            <button id="btn-start">Iniciar</button>
+            <button id="btn-pause">Pausar</button>
+            <button id="btn-reset">Reiniciar</button>
+          </div>
         </section>
 
-        <section class="task-manager">
-            <h2>Tareas Pendientes</h2>
-            <div class="add-task">
-                <input type="text" id="task-input" placeholder="¿En qué vas a trabajar?">
-                <button id="add-btn">+</button>
-            </div>
-            <ul id="task-list"></ul>
+        <!-- Sección de Tareas -->
+        <section class="task-section">
+          <h2>Mis Tareas</h2>
+          <div class="task-input-group">
+            <input type="text" id="task-input" placeholder="Añadir nueva tarea..." aria-label="Nueva tarea" />
+            <button id="btn-add-task">+</button>
+          </div>
+          <ul id="task-list">
+            <!-- Las tareas se inyectan aquí con JS -->
+          </ul>
         </section>
+      </main>
     </div>
-    <script src="script.js"></script>
-</body>
+
+    <script src="app.js"></script>
+  </body>
 </html>
