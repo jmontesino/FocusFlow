@@ -194,6 +194,19 @@ function añadirTarea() {
   }
 }
 
+// Hacer globales para poder llamarlas desde los atributos onclick
+window.toggleTarea = function (index) {
+  tareas[index].completada = !tareas[index].completada;
+  guardarTareas();
+  renderizarTareas();
+};
+
+window.eliminarTarea = function (index) {
+  tareas.splice(index, 1);
+  guardarTareas();
+  renderizarTareas();
+};
+
 // Event Listeners de Tareas
 btnAñadirTarea.addEventListener("click", añadirTarea);
 inputTarea.addEventListener("keypress", (e) => {
