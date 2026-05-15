@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow - TCC HCI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="work-mode">
+    <div class="container">
+        <section class="hero-timer">
+            <h1>FocusFlow</h1>
+            <div class="timer-display">
+                <svg class="progress-ring" width="300" height="300">
+                    <circle class="progress-ring__circle" stroke="white" stroke-width="8" fill="transparent" r="140" cx="150" cy="150"/>
+                </svg>
+                <span id="time">25:00</span>
+            </div>
+            <div class="controls">
+                <button id="start-btn">Iniciar</button>
+                <button id="reset-btn">Reiniciar</button>
+            </div>
+            <p id="status-text">Tiempo de Enfoque</p>
+        </section>
+
+        <section class="task-manager">
+            <h2>Tareas Pendientes</h2>
+            <div class="add-task">
+                <input type="text" id="task-input" placeholder="¿En qué vas a trabajar?">
+                <button id="add-btn">+</button>
+            </div>
+            <ul id="task-list"></ul>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

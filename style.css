@@ -1,0 +1,71 @@
+:root {
+    --bg-work: linear-gradient(135deg, #ff6b6b, #ee5253);
+    --bg-short: linear-gradient(135deg, #48dbfb, #00d2d3);
+    --bg-long: linear-gradient(135deg, #5f27cd, #341f97);
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background 0.5s ease;
+}
+
+.work-mode { background: var(--bg-work); }
+.short-break { background: var(--bg-short); }
+.long-break { background: var(--bg-long); }
+
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white;
+    width: 90%;
+    max-width: 400px;
+}
+
+.timer-display {
+    position: relative;
+    margin: 20px 0;
+}
+
+#time {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+button {
+    background: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px;
+    transition: transform 0.2s;
+}
+
+button:active { transform: scale(0.95); }
+
+.task-manager { margin-top: 30px; }
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.task-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
